@@ -239,4 +239,10 @@ footer ul{
     .article_flex {
         width: 33%;
     }
+    .menu_shortcut {
+        display: flex;
+    }
+    .footer_menu {
+        width: 33%;
+    }
 }
