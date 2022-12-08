@@ -94,16 +94,16 @@ a {
 header {
     background-image: url(/images/fleur.jpg);
     background-attachment: fixed;
-    background-position: cover;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 50vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
-
 .header__content {
-    vertical-align: middle;
     text-align: center;
-    height: 50vw;
-
+    margin: auto;
 }
 
 .article {
@@ -160,7 +160,8 @@ footer ul{
     margin-left: 10px;
 }
 .contact_details p {
-    margin-left: 75px;
+    margin-left: 85px;
+    width: 50%;
 }
 @media (max-width: 700px) {
     .menu-button-container {
