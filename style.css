@@ -101,6 +101,7 @@ header {
     background-position: center;
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
 }
 .header__content {
     text-align: center;
@@ -113,9 +114,11 @@ header {
     font-family: 'Comic Sans MS';
     font-style: italic;
     font-size: 16px;
-
 }
-
+.header_main {
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 40px;
+}
 .article {
     text-align: center;
 }
@@ -215,7 +218,33 @@ footer ul{
         line-height: 22px;
     }
 }
-
+@media (min-width:500px) {
+    nav a {
+        color: white;
+    }
+    .article {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        
+    }
+    .article:nth-child(1) {
+        display: inline-block;
+    }
+    .article p {
+        width: 50%;
+    }
+    
+    a {
+        width: 100%;
+    }
+    .menu_shortcut {
+        display: flex;
+    }
+    .footer_menu {
+        width: 33%;
+    }
+}
 @media (min-width: 1024px) {
     .top-nav {
         background: white;
