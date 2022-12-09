@@ -1,6 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/roboto');
 html,body {
     margin: 0;
-    font-family: 'Roboto';
+    font-family: 'roboto';
 }
 .top-nav {
     display: flex;
@@ -31,6 +32,9 @@ html,body {
     margin: 0 1rem;
     overflow: hidden;
 }
+.menu>li>a {
+    color: black;
+}
 h1 {
     color: white;
     font-weight: 500;
@@ -45,11 +49,9 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-
 #menu-toggle {
     display: none;
 }
-
 .menu-button,
 .menu-button::before,
 .menu-button::after {
@@ -72,7 +74,6 @@ h1 {
     content: '';
     margin-top: 8px;
 }
-
 #menu-toggle:checked+.menu-button-container .menu-button::before {
     margin-top: 0px;
     transform: rotate(405deg);
@@ -93,7 +94,7 @@ header {
     background-image:  linear-gradient(
         rgba(0, 0, 0, 0.6), 
         rgba(0, 0, 0, 0.6)
-      ),url(/images/fleur.jpg);
+      ),url(./images/fleur.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,8 +112,7 @@ header {
     padding: 25px;
     background-color: #5B359D;
     color: #FFF;
-    font-family: 'Comic Sans MS';
-    font-style: italic;
+
     font-size: 16px;
 }
 .header_main {
@@ -131,7 +131,6 @@ p {
 
 .end_main-paragraph {
     margin-top: 50px;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -151,7 +150,6 @@ p {
     width: 50px;
     padding: 20px;
     text-align: center;
-    
 }
 footer {
     background-color: #5B359D;
@@ -170,14 +168,22 @@ footer li, footer a, footer p, footer h3 {
 footer ul{
     padding-right: 20px;
 }
-.footer_menu {
-    margin-left: 10px;
-}
+
 .contact_details p {
-    margin-left: 85px;
+    margin-left: 80px;
     width: 50%;
 }
-@media (max-width: 700px) {
+.menu_shortcut-footer {
+    margin: auto;
+}
+i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.bottom-main {
+    margin: 20px;
+}
+@media (max-width: 769px) {
     .menu-button-container {
         display: flex;
     }
@@ -188,7 +194,6 @@ footer ul{
         left: 0;
         flex-direction: column;
         width: 100%;
-
     }
     #menu-toggle~.menu li {
         height: 0;
@@ -208,62 +213,69 @@ footer ul{
         color: black;
         background-color: white;
     }
-
     .menu>li>a {
         text-decoration: none;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
         font-size: 19px;
         line-height: 22px;
     }
+  
+    
 }
-@media (min-width:500px) {
+@media (min-width:769px) {
     nav a {
         color: white;
     }
-    .article {
-        display: flex;
-        width: 100%;
-        margin: auto;
-        
-    }
-    .article:nth-child(1) {
-        display: inline-block;
-    }
-    .article p {
-        width: 50%;
-    }
-    
-    a {
-        width: 100%;
-    }
-    .menu_shortcut {
-        display: flex;
-    }
-    .footer_menu {
-        width: 33%;
-    }
-}
-@media (min-width: 1024px) {
     .top-nav {
+        color: white;
         background: white;
     }
-
+    
     .top-nav-brand {
         background: rgba(91, 53, 157, 1);
-        width: 47%;
+        width: 45%;
     }
     .header_main {
         font-weight: 400;
         font-size: 28px;
         line-height: 33px;
     }
+    a {
+        width: 100%;
+    }
     .article {
         display: flex;
-        width: 80%;
-        margin: auto;
-        
+        flex-wrap:wrap;
+    }
+    .article p {
+        width: 50%;
+    }
+    .article_flex {
+        width: 100%;
+    }
+    .menu_shortcut {
+        display: flex;
+        justify-content: center;
+    }
+    .footer_menu {
+        width: 30%;
+        margin: 0;
+        margin-left: 50px;
+        padding: 0;
+    }
+    .contact_details p {
+        margin-left: 60px;
+    }
+    .article article {
+        width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    .top-nav {
+        background: white;
+    }
+    .top-nav-brand {
+        background: rgba(91, 53, 157, 1);
+        width: 25%;
     }
     .article p {
         width: 50%;
@@ -271,10 +283,16 @@ footer ul{
     .article_flex {
         width: 33%;
     }
-    .menu_shortcut {
+    
+    .article {
         display: flex;
+        flex-wrap: nowrap;
+    }
+    .menu_shortcut {
+        width: 100%;
     }
     .footer_menu {
-        width: 33%;
+        width: 30%;
+        margin-left: 100px;
     }
 }
