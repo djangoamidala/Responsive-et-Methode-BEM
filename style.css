@@ -64,7 +64,6 @@ h1 {
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
 }
-
 .menu-button::before {
     content: '';
     margin-top: -8px;
@@ -118,6 +117,7 @@ header {
 .header_main {
     color: rgba(0, 0, 0, 0.65);
     margin-bottom: 40px;
+    font-size: 20px;
 }
 .article {
     text-align: center;
@@ -133,8 +133,8 @@ p {
     margin-top: 50px;
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 20px;
+    text-justify: auto;
     text-align: center;
     color: rgba(0, 0, 0, 0.65);
 }
@@ -256,6 +256,13 @@ i {
         display: flex;
         justify-content: center;
     }
+    .end_main-paragraph {
+        width: 90%;
+        font-size: 26px;
+    }
+    .header_main {
+        width: 80%;
+    }
     .footer_menu {
         width: 30%;
         margin: 0;
@@ -294,5 +301,9 @@ i {
     .footer_menu {
         width: 30%;
         margin-left: 100px;
+    }
+    .end_main-paragraph, .header_main {
+        width: 70%;
+        font-size: 26px;
     }
 }
